@@ -2210,7 +2210,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 69767306810585667, guid: 66f76194757c52d49836978209ac9341,
     type: 3}
   spawnTimer: 1
-  poolSize: 5
+  poolSize: 7
 --- !u!4 &2134387475
 Transform:
   m_ObjectHideFlags: 0
