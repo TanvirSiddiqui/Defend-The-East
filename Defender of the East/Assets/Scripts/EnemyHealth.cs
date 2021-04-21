@@ -14,7 +14,6 @@ public class EnemyHealth : MonoBehaviour
      void OnParticleCollision(GameObject other)
     {
         CalculateHit();
-        Debug.Log("Hit");
     }
 
     void CalculateHit()
