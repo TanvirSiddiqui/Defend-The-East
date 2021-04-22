@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Goldmine : MonoBehaviour
 {
     [SerializeField] int startingBalance = 150;
@@ -20,6 +20,16 @@ public class Goldmine : MonoBehaviour
 
     public void Withdraw(int amount)
     {
+        if (currentBalance < 0)
+        {
+            ReloadScene();
+        }
         currentBalance -= Mathf.Abs(amount);
+    }
+
+    void ReloadScene()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
     }
 }
