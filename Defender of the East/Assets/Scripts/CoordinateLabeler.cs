@@ -26,7 +26,6 @@ public class CoordinateLabeler : MonoBehaviour
             DisplayCoordinates();
             UpdateObjectName();
         }
-
         SetLabelColor();
         ToggleLabel();
         DisplayCoordinates();
