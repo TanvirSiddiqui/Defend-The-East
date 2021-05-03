@@ -19,6 +19,7 @@ public class CoordinateLabeler : MonoBehaviour
         label = GetComponent<TextMeshPro>();
         gridManager = FindObjectOfType<GridManager>();
         label.enabled = false;
+        DisplayCoordinates();
     }
 
     void Update()
@@ -30,7 +31,7 @@ public class CoordinateLabeler : MonoBehaviour
         }
         SetLabelColor();
         ToggleLabel();
-        DisplayCoordinates();
+ 
     }
 
     void SetLabelColor()
@@ -49,7 +50,7 @@ public class CoordinateLabeler : MonoBehaviour
             label.color = exploredColor;
         }
         else
-        {
+        {   
             label.color = defaultColor;
         }
        
