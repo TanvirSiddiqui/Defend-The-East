@@ -5438,7 +5438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9262b318bf468f04988ab7a8ddacb01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 4, y: 4}
+  gridSize: {x: 6, y: 6}
 --- !u!4 &303364312
 Transform:
   m_ObjectHideFlags: 0
@@ -30956,6 +30956,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1615242669}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1619271549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 946582036257857619, guid: da489567c55e2dc488c7f74655e32fa2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1525517431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1619271550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619271549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2103dc766c65294c90ba331ff53f43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCoordinates: {x: -1, y: -1}
+  destinationCoordinates: {x: -3, y: 6}
 --- !u!1001 &1620980976
 PrefabInstance:
   m_ObjectHideFlags: 0
