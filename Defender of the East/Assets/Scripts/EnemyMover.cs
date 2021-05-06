@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<Tile> path = new List<Tile>();
-    [SerializeField] [Range(0f,5f)]float speed = 1f;
+    [SerializeField] [Range(0f, 5f)] float speed = 1f;
 
     Enemy enemy;
     void OnEnable()
@@ -26,7 +26,7 @@ public class EnemyMover : MonoBehaviour
     {
         path.Clear();
         GameObject parent = GameObject.FindGameObjectWithTag("EnemyPath");
-        foreach(Transform child in parent.transform)
+        foreach (Transform child in parent.transform)
         {
             Tile waypoint = child.GetComponent<Tile>();
             if (waypoint != null)
@@ -47,9 +47,9 @@ public class EnemyMover : MonoBehaviour
         enemy.SteelGold();
         gameObject.SetActive(false);
     }
-       IEnumerator FollowPath()
+    IEnumerator FollowPath()
     {
-        foreach(Tile waypoint in path)
+        foreach (Tile waypoint in path)
         {
             //  transform.position = waypoint.transform.position;
             Vector3 startPosition = transform.position;
@@ -58,7 +58,7 @@ public class EnemyMover : MonoBehaviour
             transform.LookAt(endPosition);
             while (travelPercent < 1f)
             {
-                travelPercent += Time.deltaTime*speed;
+                travelPercent += Time.deltaTime * speed;
                 transform.position = Vector3.Lerp(startPosition, endPosition, travelPercent);
                 yield return new WaitForEndOfFrame();
             }
